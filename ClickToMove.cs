@@ -136,6 +136,12 @@ public class ClickToMove : MonoBehaviour {
         Vector3 temp = transform.position;
         temp.y = renderer.bounds.extents.y;
         transform.position = temp;
+
+        //lock rotation so that it can only rotate about y
+        Vector3 temp2 = transform.eulerAngles;
+        temp2.x = 0f;
+        temp2.z = 0f;
+        transform.eulerAngles = temp2;
     }
 
     void OnCollisionEnter(Collision col)
