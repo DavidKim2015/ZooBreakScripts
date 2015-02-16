@@ -32,10 +32,12 @@ public class CameraController : MonoBehaviour {
 
         float xAxisValue = Input.GetAxisRaw("Horizontal");
         float zAxisValue = Input.GetAxisRaw("Vertical");
+        float localXAxisValue = Input.GetAxis("Mouse Scrollwheel");
 
         if (Camera.current != null)
         {
             Camera.current.transform.Translate(new Vector3(xAxisValue, 0.0f, zAxisValue), Space.World);
+            Camera.current.transform.Translate(new Vector3(localXAxisValue * 100, 0.0f, 0.0f), Space.Self);
         }
 
 	}
