@@ -15,3 +15,6 @@ expected results)
 the moveable objects that the elephant puts in their paths
 - Lights should detect and disappear upon any animal touching them
 : (timer should go up upon contacting them)
+
+
+ADDED MONKEY N DOOR
