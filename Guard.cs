@@ -28,6 +28,7 @@ public class Guard : MonoBehaviour {
         {
             if (Vector3.Distance(transform.position, maxPatrolPos) > 1)
             {
+
                 transform.position = Vector3.Lerp(transform.position, maxPatrolPos, 2 * Time.deltaTime);
             }
             else
@@ -51,6 +52,11 @@ public class Guard : MonoBehaviour {
         {
             //Destroy(gameObject);
             Debug.Log("[Zoo Break] Collision:Animal touched guard. name:"+col.gameObject.name);
+        }
+        else
+        {
+            //make guard move the other way if collided
+            moveUp = !moveUp;
         }
     }
 

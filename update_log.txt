@@ -1,0 +1,17 @@
+
+150218 Daegon
+- Added A_Elephant.cs, Trig_TimeUp.cs
+- Updated Guard.cs
+- Change all guards so that they don't have triggers on colliders
+- Attach A_Elephant.cs to Elephant entity
+- Attach Trig_TimeUp.cs to all light things inside the house like prefabs
+- Rotate Exit gates on the right map (the 2nd room) so that 
+entities can escape through the doors upon the elephant pushing out the cart
+in front of the door
+
+expected results)
+- Elephant should be able to push objects with prefix 'Moveable'
+- Guards should change direction or just die if they collide with any of
+the moveable objects that the elephant puts in their paths
+- Lights should detect and disappear upon any animal touching them
+: (timer should go up upon contacting them)
